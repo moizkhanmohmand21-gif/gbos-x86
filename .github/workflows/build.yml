@@ -1,0 +1,22 @@
+name: Build gbOS86 USB Image
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free up disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
+          df -h
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Build USB Looper Image
+        run: |
+          chmod +x build.sh
+          printf "3\n" | ./build.sh
+      - name: Upload Image
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbOS86-USB-Image
+          path: dist/*.img
