@@ -1,4 +1,24 @@
-# gbos-x86 (gbOS86)
+# gbos-x86 (gbOS86)    
+
+# 🚀 Build gbOS86 Bootable USB Image in the Cloud (One-Click GitHub Actions)
+
+If you are using **ChromeOS Flex (Penguin Linux)** or a low-storage laptop and getting disk space, DNS, or slow build errors when building **gbOS86 (`gbos-x86`)**, you can build the complete bootable USB `.img` file for free on GitHub's cloud servers in ~20 minutes!
+
+## ⚡ How to Build & Download Your Bootable USB `.img`
+
+1. **Fork this repository** (click the **Fork** button at the top right of this page).
+2. Go to the **Actions** tab in your forked repository.
+3. Select **Build gbOS86 USB Image** on the left sidebar and click **Run workflow**.
+4. Wait ~20 minutes for the green checkmark ✅.
+5. Scroll down to the **Artifacts** section and download **`gbOS86-USB-Image`**.
+
+## 💿 How to Flash to a USB Drive (ChromeOS Flex / Windows / Linux)
+
+1. Extract the downloaded ZIP file to get the `.img` file (`gbOS86-looper-*.img`).
+2. **On ChromeOS Flex:** Rename `.img` to `.bin`, open **Chromebook Recovery Utility** → ⚙️ **Use local image** → select the `.bin` file and flash to a 16GB+ USB drive.
+3. **On Windows/Linux:** Use **Rufus** or **BalenaEtcher** to flash the `.img` file directly to your USB drive.
+4. **Booting:** Disable **Secure Boot** in your PC's BIOS, open the Boot Menu (`F12` / `F9` / `Esc`), and boot from your USB drive.
+
 
 <p align="center"><img src="docs/demo.gif" alt="gbOS86 running on a Dell Latitude 5300" height="420">&nbsp;&nbsp;<img src="docs/screenshot-dell-latitude-5300.jpg" alt="Googlebook OS on a Dell Latitude 5300" height="420"></p>
 <p align="center"><b>Googlebook OS on a Dell Latitude 5300.</b> Full 43 s demo: <a href="https://gbos86.com/static/demo.mp4">gbos86.com/static/demo.mp4</a></p>
