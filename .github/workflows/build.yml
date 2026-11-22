@@ -14,7 +14,7 @@ jobs:
       - name: Build USB Looper Image
         run: |
           chmod +x build.sh
-          printf "4\n16\ny\n" | ./build.sh
+          printf "3\ny\n" | ./build.sh
       - name: Upload Image
         uses: actions/upload-artifact@v4
         with:
